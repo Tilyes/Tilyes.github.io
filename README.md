@@ -7,13 +7,13 @@ Jum 的个人主页 —— [tilyes.github.io](https://tilyes.github.io)
 ## 结构
 
 ```
-├── index.html          首页：简介 / 技能 / 项目 / 最新文章 / 联系方式
+├── index.html          首页：简介 / 技能 / 论文 / 项目 / 最新文章 / 联系方式
 ├── blog.html           文章列表
 ├── post.html           文章详情（post.html?p=<slug>）
 ├── GUIDE.md            这个站怎么改
-├── CNAME               自定义域名
 ├── assets/
 │   ├── css/style.css       主题变量 + 全部样式（暗色 / 亮色）
+│   ├── img/<主题>/         文章配图
 │   └── js/
 │       ├── config.js       ★ 所有个人信息都在这里
 │       ├── markdown.js     自己写的迷你 Markdown 渲染器

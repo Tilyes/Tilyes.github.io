@@ -52,11 +52,28 @@ projects: [
   "date": "2026-10-03",
   "summary": "一句话摘要",
   "tags": ["随笔"],
-  "readingTime": "5 分钟"
+  "readingTime": "5 分钟",
+  "zhihu": "https://www.zhihu.com/question/xxx/answer/yyy"
 }
 ```
 
 `slug` 必须和文件名一致（不含 `.md`），列表会自动按日期倒序排。
+
+## 文章里的图片
+
+图片放在 `assets/img/<主题>/` 下，正文里按站根目录写相对路径：
+
+```markdown
+![这张图的说明](assets/img/lspp/pc-column-model.png)
+
+*图 1　图注写在图片下面这一行，斜体。*
+```
+
+图片下面单独一行写 `*...*` 会渲染成斜体，用来当图注。
+
+## 知乎链接
+
+`config.js` 里的 `zhihu` 是文章页底部「我的知乎主页」的链接。某一篇在知乎上也有对应回答时，在该篇的 `index.json` 条目里加一个 `zhihu` 字段写上那一篇的地址，就会变成「在知乎读这篇」。
 
 ## 本地预览
 

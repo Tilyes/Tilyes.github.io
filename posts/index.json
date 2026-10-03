@@ -13,16 +13,30 @@
       "readingTime": "11 分钟"
     },
     {
-      "slug": "refactor-geodesic-shell",
-      "title": "从 450 行到 280 行：一次网壳建模脚本的重构",
+      "slug": "lspp-parametric-modeling",
+      "title": "给 LS-PrePost 写一套参数化建模脚本：SCL + cfile",
       "date": "2026-10-03",
-      "summary": "几何算了两遍，就一定会有对不上的那天。记录一次把短程线网壳脚本拆成四层的过程。",
+      "summary": "LS-PrePost 自带示例里藏着 SCL 脚本接口，而 GUI 的每一步操作又都会落进 cfile。把这两条线接起来，改网格尺寸和箍筋间距就不用再把界面点一遍。",
+      "tags": [
+        "LS-DYNA",
+        "LS-PrePost",
+        "参数化建模"
+      ],
+      "readingTime": "9 分钟",
+      "zhihu": "https://zhuanlan.zhihu.com/p/2033857510436762150"
+    },
+    {
+      "slug": "refactor-geodesic-shell",
+      "title": "短程线网壳的参数化建模：几何、方法，与一次脚本重构",
+      "date": "2026-10-03",
+      "summary": "从正二十面体的频率细分、四种建模方法的取舍，到把 450 行脚本拆成四层、让几何只算一遍。",
       "tags": [
         "结构工程",
-        "重构",
-        "Python"
+        "参数化建模",
+        "重构"
       ],
-      "readingTime": "8 分钟"
+      "readingTime": "14 分钟",
+      "zhihu": "https://zhuanlan.zhihu.com/p/1941555623335538892"
     },
     {
       "slug": "mini-markdown-renderer",

@@ -27,6 +27,18 @@
     $('post-title').textContent = meta.title;
     $('post-meta').textContent =
       [meta.date, (meta.tags || []).join(' / '), meta.readingTime || ''].filter(Boolean).join('  ·  ');
+
+    /* 知乎链接：单篇文章可在 index.json 里用 zhihu 指定，没填就指向主页 */
+    const links = $('post-links');
+    if (links) {
+      const zhihu = meta.zhihu || SITE.zhihu;
+      links.innerHTML = zhihu
+        ? `<a class="zhihu-link" href="${esc(zhihu)}" target="_blank" rel="noopener">${
+            meta.zhihu ? '在知乎读这篇' : '我的知乎主页'
+          } ↗</a>`
+        : '';
+    }
+
     $('post-body').innerHTML = miniMarkdown.render(md);
   } catch (e) {
     fail('加载失败：' + e.message + '。如果是直接双击打开的本地文件，需要用一个本地服务器访问。');

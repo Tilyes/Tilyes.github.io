@@ -23,7 +23,7 @@ const SITE = {
   /* ---------- 技能栈 ---------- */
   skills: [
     { group: '编程', items: ['Python', 'C++20', 'LaTeX', 'Git'] },
-    { group: '工程分析', items: ['OpenSees', 'Abaqus', 'SAP2000', '有限元分析'] },
+    { group: '工程分析', items: ['LS-DYNA', 'LS-PrePost', 'Abaqus', 'OpenSees', 'SAP2000', '有限元分析'] },
     { group: '图形 / 工具链', items: ['Vulkan', 'ImGui', 'CMake', 'vcpkg', 'GLSL'] },
     { group: '研究方向', items: ['结构冲击动力学', '装配式混凝土', '古建木结构抗震'] }
   ],
@@ -36,6 +36,13 @@ const SITE = {
       url: 'https://github.com/Tilyes/Geodesic-Shell-Parametric-Modeling',
       tags: ['Python', '空间结构', '参数化建模'],
       highlight: true
+    },
+    {
+      name: 'LSPP-Parametric-Modeling',
+      desc: '用 LS-PrePost 脚本做参数化建模：SCL 脚本负责建几何（实体 Part、钢筋 Part 以及 Part_List / Node_Set），cfile 负责配材料 / 截面 / 接触 / 求解控制。在预制混凝土柱水平冲击模型上跑通，改网格尺寸、截面尺寸、箍筋间距只需要动脚本开头的几个变量。',
+      url: 'https://github.com/Tilyes/LSPP-Parametric-Modeling',
+      tags: ['LS-DYNA', 'LS-PrePost', '参数化建模'],
+      highlight: false
     },
     {
       name: 'OpenSees-GPU-Solver',
@@ -137,8 +144,10 @@ const SITE = {
 
   /* ---------- 联系方式与社交链接 ---------- */
   email: 'leijun0601@foxmail.com',
+  zhihu: 'https://www.zhihu.com/people/jumjum-67/posts',  // 文章页底部的「知乎」链接；单篇文章可在 index.json 里用 zhihu 字段覆盖
   social: [
-    { label: 'GitHub', url: 'https://github.com/Tilyes' }
+    { label: 'GitHub', url: 'https://github.com/Tilyes' },
+    { label: '知乎', url: 'https://www.zhihu.com/people/jumjum-67/posts' }
     // 想加别的就照格式补：{ label: '掘金', url: 'https://juejin.cn/user/xxx' }
   ],
 
