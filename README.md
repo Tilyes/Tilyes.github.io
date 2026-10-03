@@ -1,6 +1,6 @@
 # Tilyes.github.io
 
-Jum 的个人主页 —— [jumjumblog.com](https://jumjumblog.com)
+Jum 的个人主页 —— [tilyes.github.io](https://tilyes.github.io)
 
 零依赖纯静态站点，没有构建步骤，也没有 `node_modules`。
 

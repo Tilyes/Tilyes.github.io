@@ -78,4 +78,6 @@ git commit -m "update"
 git push
 ```
 
-站点地址：<https://jumjumblog.com>（备用：<https://tilyes.github.io>）
+站点地址：<https://tilyes.github.io>
+
+> 以后买了自定义域名，在仓库里加回 `CNAME` 文件（内容为裸域名）、配好 DNS，再回 Pages 设置里填域名即可。
