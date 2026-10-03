@@ -38,6 +38,13 @@ const SITE = {
       highlight: true
     },
     {
+      name: 'OpenSees-GPU-Solver',
+      desc: '在 OpenSees 有限元框架之上接入自研的 cuSPARSE GPU 迭代求解器：CG / BiCGStab 迭代 + Jacobi / ILU(0) 预条件，SpMV 走 cuSPARSE generic API。三个 3D 场景相较串行 SuperLU 最高加速 212×，并定位了 sm_120 平台上两个损坏的官方 API。上游 OpenSees 版权属 UC Regents，本仓库为研究用途。',
+      url: 'https://github.com/Tilyes/OpenSees-GPU-Solver',
+      tags: ['CUDA', 'OpenSees', '高性能计算'],
+      highlight: false
+    },
+    {
       name: 'OpenSees_viewer',
       desc: '基于 C++20 + Vulkan 的 OpenSees 有限元模型 3D 可视化工具。自己做 TCL 模型解析、离屏渲染到 ImGui 视口、轨道相机，目前支持杆系结构与节点的显示，应力云图和时间步动画在路上。',
       url: 'https://github.com/Tilyes/OpenSees_viewer',
