@@ -77,6 +77,31 @@
       .join('');
   }
 
+  /* ---------- 论文与专利 ---------- */
+  const pub = $('pub-body');
+  if (pub) {
+    const list = SITE.publications || [];
+    const LEAD = ['一作', '第一发明人'];
+    pub.innerHTML =
+      (SITE.pubSummary ? `<p class="pub-summary">${esc(SITE.pubSummary)}</p>` : '') +
+      (list.length
+        ? `<ol class="pub-list">${list
+            .map(
+              (p) => `<li class="pub-item${p.lead ? ' lead' : ''}">
+              <div class="pub-title">${esc(p.title)}</div>
+              <div class="pub-authors">${esc(p.authors)}</div>
+              <div class="pub-foot">
+                <span class="pub-venue">${esc(p.venue)}</span>
+                <span class="pub-badges">${(p.badges || [])
+                  .map((b) => `<span class="tag${LEAD.indexOf(b) >= 0 ? ' lead' : ''}">${esc(b)}</span>`)
+                  .join('')}</span>
+              </div>
+            </li>`
+            )
+            .join('')}</ol>`
+        : '<p style="color:var(--text-dim)">还没有录入成果，在 config.js 的 publications 里加一条即可。</p>');
+  }
+
   /* ---------- 项目 ---------- */
   const projects = $('projects-body');
   if (projects) {

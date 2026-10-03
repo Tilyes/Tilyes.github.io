@@ -192,6 +192,42 @@ h2 {
   font-family: var(--mono);
 }
 
+/* ---------- 论文与专利 ---------- */
+.pub-summary {
+  color: var(--text-dim);
+  font-size: 14.5px;
+  margin: 0 0 20px;
+}
+.pub-list { list-style: none; margin: 0; padding: 0; counter-reset: pub; }
+.pub-item {
+  counter-increment: pub;
+  position: relative;
+  padding: 16px 0 16px 46px;
+  border-bottom: 1px solid var(--border);
+}
+.pub-item:last-child { border-bottom: none; }
+.pub-item::before {
+  content: counter(pub, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 17px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-faint);
+}
+.pub-item.lead::before { color: var(--accent-2); }
+.pub-title { color: var(--text); font-weight: 550; font-size: 15.5px; line-height: 1.55; }
+.pub-authors { color: var(--text-dim); font-size: 13.5px; margin-top: 5px; }
+.pub-foot { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 9px; }
+.pub-venue { font-size: 13.5px; color: var(--text-faint); }
+.pub-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+.pub-badges .tag { font-size: 12px; padding: 2px 9px; }
+.pub-badges .tag.lead {
+  background: color-mix(in srgb, var(--accent-2) 14%, transparent);
+  color: var(--accent-2);
+  border-color: color-mix(in srgb, var(--accent-2) 32%, transparent);
+}
+
 /* ---------- 项目卡片 ---------- */
 .cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
 .card {
@@ -297,4 +333,6 @@ footer {
   .hero { padding: 44px 0 32px; }
   .post-item { flex-direction: column; gap: 4px; }
   .post-date { min-width: auto; }
+  .pub-item { padding-left: 32px; }
+  .pub-item::before { top: 18px; }
 }
