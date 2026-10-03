@@ -25,7 +25,7 @@ const SITE = {
     { group: '编程', items: ['Python', 'C++20', 'LaTeX', 'Git'] },
     { group: '工程分析', items: ['OpenSees', 'Abaqus', 'SAP2000', '有限元分析'] },
     { group: '图形 / 工具链', items: ['Vulkan', 'ImGui', 'CMake', 'vcpkg', 'GLSL'] },
-    { group: '研究方向', items: ['空间结构', '短程线网壳', '参数化建模'] }
+    { group: '研究方向', items: ['结构冲击动力学', '装配式混凝土', '古建木结构抗震'] }
   ],
 
   /* ---------- 项目作品集 ---------- */
