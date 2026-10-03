@@ -1,11 +1,27 @@
 {
   "posts": [
     {
+      "slug": "opensees-gpu-solver",
+      "title": "在 OpenSees 里塞进一块 GPU：把有限元求解加速 212 倍",
+      "date": "2026-10-03",
+      "summary": "在 OpenSees 上接入自研 cuSPARSE 迭代求解器，三场景最高加速 212 倍；顺带记录 sm_120 上两个坏掉的官方 API 是怎么被揪出来的，以及 ILU(0) 为什么反而更慢。",
+      "tags": [
+        "OpenSees",
+        "CUDA",
+        "高性能计算"
+      ],
+      "readingTime": "11 分钟"
+    },
+    {
       "slug": "refactor-geodesic-shell",
       "title": "从 450 行到 280 行：一次网壳建模脚本的重构",
       "date": "2026-10-03",
       "summary": "几何算了两遍，就一定会有对不上的那天。记录一次把短程线网壳脚本拆成四层的过程。",
-      "tags": ["结构工程", "重构", "Python"],
+      "tags": [
+        "结构工程",
+        "重构",
+        "Python"
+      ],
       "readingTime": "8 分钟"
     },
     {
@@ -13,7 +29,10 @@
       "title": "用不到 100 行写一个够用的 Markdown 渲染器",
       "date": "2026-09-28",
       "summary": "博客只需要十来种语法，那就没必要引一个几十 KB 的库。",
-      "tags": ["前端", "造轮子"],
+      "tags": [
+        "前端",
+        "造轮子"
+      ],
       "readingTime": "6 分钟"
     },
     {
@@ -21,7 +40,10 @@
       "title": "为什么我把个人主页搬到了 GitHub Pages",
       "date": "2026-09-20",
       "summary": "不需要服务器、不需要备案、也不需要花钱，一个仓库就是一个站点。",
-      "tags": ["随笔", "折腾"],
+      "tags": [
+        "随笔",
+        "折腾"
+      ],
       "readingTime": "3 分钟"
     }
   ]
