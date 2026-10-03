@@ -82,12 +82,15 @@
   if (pub) {
     const list = SITE.publications || [];
     const LEAD = ['一作', '第一发明人'];
+    const limit = SITE.pubShow || 3;
+    const clipped = list.length > limit;
+
     pub.innerHTML =
       (SITE.pubSummary ? `<p class="pub-summary">${esc(SITE.pubSummary)}</p>` : '') +
       (list.length
-        ? `<ol class="pub-list">${list
+        ? `<ol class="pub-list${clipped ? ' clipped' : ''}" id="pub-list">${list
             .map(
-              (p) => `<li class="pub-item${p.lead ? ' lead' : ''}">
+              (p, i) => `<li class="pub-item${p.lead ? ' lead' : ''}${i >= limit ? ' pub-hidden' : ''}">
               <div class="pub-title">${esc(p.title)}</div>
               <div class="pub-authors">${esc(p.authors)}</div>
               <div class="pub-foot">
@@ -98,8 +101,22 @@
               </div>
             </li>`
             )
-            .join('')}</ol>`
+            .join('')}</ol>` +
+          (clipped
+            ? `<div class="pub-more"><button class="btn" id="pub-toggle" type="button">展开全部 ${list.length} 项</button></div>`
+            : '')
         : '<p style="color:var(--text-dim)">还没有录入成果，在 config.js 的 publications 里加一条即可。</p>');
+
+    const pubToggle = $('pub-toggle');
+    const pubList = $('pub-list');
+    if (pubToggle && pubList) {
+      pubToggle.addEventListener('click', () => {
+        const nowClipped = pubList.classList.toggle('clipped');
+        if (pubToggle.textContent !== undefined) {
+          pubToggle.textContent = nowClipped ? `展开全部 ${list.length} 项` : '收起';
+        }
+      });
+    }
   }
 
   /* ---------- 项目 ---------- */

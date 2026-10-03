@@ -62,6 +62,7 @@ const SITE = {
 
   /* ---------- 论文与专利 ---------- */
   pubSummary: 'SCI 5 篇（一作 1 篇）· EI 3 篇 · 中文核心 1 篇　｜　实用新型专利授权 1 项 · 发明专利申请 1 项',
+  pubShow: 3,                        // 首页默认展示几条，其余的收在「展开全部」里
   publications: [
     {
       title: 'Predicting impact response of reinforced concrete members using an AEGCN-dynamicformer network',
