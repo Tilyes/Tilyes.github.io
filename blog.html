@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>博客 · Jum</title>
+  <meta name="description" content="技术笔记与随笔">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✍️</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="blog">
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="nav-brand" id="nav-brand" href="index.html"></a>
+      <div class="nav-links">
+        <a href="index.html#about">关于</a>
+        <a href="index.html#projects">项目</a>
+        <a href="blog.html">博客</a>
+        <a href="index.html#contact">联系</a>
+        <a id="nav-github" href="#" target="_blank" rel="noopener">GitHub</a>
+        <button class="theme-btn" id="theme-toggle" title="切换主题" aria-label="切换主题"></button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <div class="hero" style="padding-bottom:8px">
+      <h1>博客</h1>
+      <p class="hero-sub">写点技术笔记，也写点别的。更新频率随缘。</p>
+    </div>
+
+    <section style="border-top:none">
+      <h2>全部文章</h2>
+      <div id="all-posts"></div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <span id="footer-text"></span>
+    <a id="footer-github" href="#" target="_blank" rel="noopener">→ GitHub</a>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/markdown.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

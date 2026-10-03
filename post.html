@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>文章 · Jum</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="post">
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="nav-brand" id="nav-brand" href="index.html"></a>
+      <div class="nav-links">
+        <a href="index.html#about">关于</a>
+        <a href="index.html#projects">项目</a>
+        <a href="blog.html">博客</a>
+        <a href="index.html#contact">联系</a>
+        <a id="nav-github" href="#" target="_blank" rel="noopener">GitHub</a>
+        <button class="theme-btn" id="theme-toggle" title="切换主题" aria-label="切换主题"></button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <article class="article">
+      <a class="back-link" href="blog.html">← 返回文章列表</a>
+      <div class="article-head">
+        <h1 class="article-title" id="post-title">加载中…</h1>
+        <div class="article-meta" id="post-meta"></div>
+      </div>
+      <div class="markdown" id="post-body"></div>
+    </article>
+  </main>
+
+  <footer class="wrap">
+    <span id="footer-text"></span>
+    <a id="footer-github" href="#" target="_blank" rel="noopener">→ GitHub</a>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/markdown.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/post.js"></script>
+</body>
+</html>
