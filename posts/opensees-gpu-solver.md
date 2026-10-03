@@ -1,6 +1,6 @@
 # 在 OpenSees 里塞进一块 GPU：把有限元求解加速 212 倍
 
-本文基于本人毕业设计《OPENSEES 应用与高性能计算》整理。代码已开源：[OpenSees-GPU-Solver](https://github.com/Tilyes/OpenSees-GPU-Solver)，实施日志、基准日志、sm_120 复现器等全部过程文档都在仓库的 `plan/` 目录里。
+本文基于 **OPENSEES 应用与高性能计算** 这个项目整理。代码已开源：[OpenSees-GPU-Solver](https://github.com/Tilyes/OpenSees-GPU-Solver)，实施日志、基准日志、sm_120 复现器等全部过程文档都在仓库的 `plan/` 目录里。
 
 **先说明归属**：OpenSees 是美国太平洋地震工程研究中心（PEER）主导开发的开源有限元框架，版权属加州大学董事会（The Regents of the University of California），仅限教育/研究/非营利机构的非商业用途。**本文的工作不是从零写一个有限元软件**，而是在 OpenSees 之上新增一个 GPU 线性求解器。除求解器、基准与文档之外，单元、材料、分析算法、Tcl 解释器全部是上游 OpenSees 的成果。
 
@@ -398,4 +398,4 @@ OpenSees 是一个有二十多年积累、被写成教科书的框架。我做�
 
 ---
 
-*本文基于毕业设计《OPENSEES 应用与高性能计算》整理。代码与全部过程文档见 [OpenSees-GPU-Solver](https://github.com/Tilyes/OpenSees-GPU-Solver) 仓库。*
+*本文基于 OPENSEES 应用与高性能计算项目整理。代码与全部过程文档见 [OpenSees-GPU-Solver](https://github.com/Tilyes/OpenSees-GPU-Solver) 仓库。*
